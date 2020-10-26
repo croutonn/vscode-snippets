@@ -1,7 +1,7 @@
 # vscode-snippets
 
 <!-- %AUTO_DOCUMENT_DESCRIPTION_START% -->
-My vscode snippets
+VSCode snippets for front-end engeneers.
 <!-- %AUTO_DOCUMENT_DESCRIPTION_END% -->
 
 --

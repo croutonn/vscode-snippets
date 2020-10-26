@@ -32,7 +32,7 @@
   "useLayoutEffect": {
     "prefix": "useLayoutEffect",
     "body": "useLayoutEffect(() => {\n\t${1:effect}\n\treturn () => {\n\t\t${2:clearEffect}\n\t}\n}, [${3:dependencies}]",
-    "description": "",
+    "description": "useLayoutEffect",
     "scope": "javascript,javascriptreact,typescript,typescriptreact"
   },
   "useMemo": {
