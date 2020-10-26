@@ -1,0 +1,20 @@
+{
+  "ForwardRefRenderFunction_Component": {
+    "prefix": "frrfc",
+    "body": "import { ForwardRefRenderFunction, useImperativeHandle } from 'react'\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\ntype ${1:$TM_FILENAME_BASE}Handles = {}\n\nconst ${1:$TM_FILENAME_BASE}: ForwardRefRenderFunction<${1:$TM_FILENAME_BASE}Handles, ${1:$TM_FILENAME_BASE}Props> = (props, ref) => {\n\tuseImperativeHandle(ref, () => ({\n\t\t${3:handles}\n\t}), [${4:dependencies}])\n\treturn (\n\t\t<>\n\t\t\t${2}\n\t\t</>\n\t)\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
+    "description": "ForwardRefRenderFunction Component",
+    "scope": "typescriptreact"
+  },
+  "Function_Component": {
+    "prefix": "fc",
+    "body": "type ${1:$TM_FILENAME_BASE}Props = {\n}\n\nconst ${1:$TM_FILENAME_BASE}: React.FunctionComponent<${1:$TM_FILENAME_BASE}Props> = (props) => {\n\treturn (\n\t\t<>\n\t\t\t${2}\n\t\t</>\n\t)\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
+    "description": "React Function Component",
+    "scope": "typescriptreact"
+  },
+  "Void_Function_Component": {
+    "prefix": "vfc",
+    "body": "type ${1:$TM_FILENAME_BASE}Props = {\n}\n\nconst ${1:$TM_FILENAME_BASE}: React.VoidFunctionComponent<${1:$TM_FILENAME_BASE}Props> = (props) => {\n\treturn (\n\t\t<>\n\t\t\t${2}\n\t\t</>\n\t)\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
+    "description": "React Void Function Component",
+    "scope": "typescriptreact"
+  }
+}

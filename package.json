@@ -1,0 +1,95 @@
+{
+  "name": "@croutonn/vscode-snippets",
+  "description": "VSCode snippets for front-end engeneers.",
+  "version": "1.0.0",
+  "repository": "git@github.com:croutonn/vscode-snippets.git",
+  "author": "croutonn <croutonna@gmail.com>",
+  "publisher": "croutonn",
+  "license": "MIT",
+  "keywords": [
+    "vscode",
+    "vscode snippet"
+  ],
+  "engines": {
+    "vscode": ">=1.2.8"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/next.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/next.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/react-hooks.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react-hooks.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/react-hooks.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react-hooks.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/utils.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/utils.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/utils.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/utils.json"
+      }
+    ]
+  },
+  "scripts": {
+    "prebuild": "mkdir -p snippets",
+    "build": "run-p build:*",
+    "build:react-hooks": "vscode-snippet-generator -s src/react-hooks -o snippets/react-hooks.json",
+    "build:react": "vscode-snippet-generator -s src/react -o snippets/react.json",
+    "build:next": "vscode-snippet-generator -s src/next -o snippets/next.json",
+    "build:utils": "vscode-snippet-generator -s src/utils -o snippets/utils.json",
+    "postbuild": "npm run update-package && npm run update-document",
+    "update-package": "node scripts/update-package.js",
+    "update-document": "node scripts/update-document.js",
+    "prevsce-pack": "npm run build",
+    "vsce-pack": "vsce package --githubBranch main",
+    "prevsce-publish": "npm run vsce-pack",
+    "vsce-publish": "vsce publish --githubBranch main"
+  },
+  "devDependencies": {
+    "front-matter": "^4.0.2",
+    "npm-run-all": "^4.1.5",
+    "vsce": "^1.81.1",
+    "vscode-snippet-generator": "^1.3.1"
+  },
+  "bugs": {
+    "url": "https://github.com/croutonn/vscode-snippets/issues"
+  },
+  "homepage": "https://github.com/croutonn/vscode-snippets#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
