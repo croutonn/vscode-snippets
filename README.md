@@ -4,7 +4,7 @@
 VSCode snippets for front-end engeneers.
 <!-- %AUTO_DOCUMENT_DESCRIPTION_END% -->
 
---
+---
 
 <!-- %AUTO_DOCUMENT_SNIPPETS_START% -->
 ## next
