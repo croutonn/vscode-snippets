@@ -1,5 +1,5 @@
 {
-  "name": "@croutonn/vscode-snippets",
+  "name": "vscode-snippets-croutonn",
   "description": "VSCode snippets for front-end engeneers.",
   "version": "1.0.0",
   "repository": "git@github.com:croutonn/vscode-snippets.git",
@@ -88,8 +88,5 @@
   "bugs": {
     "url": "https://github.com/croutonn/vscode-snippets/issues"
   },
-  "homepage": "https://github.com/croutonn/vscode-snippets#readme",
-  "publishConfig": {
-    "access": "public"
-  }
+  "homepage": "https://github.com/croutonn/vscode-snippets#readme"
 }
