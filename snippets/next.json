@@ -31,6 +31,12 @@
     "description": "Next.js Preview API",
     "scope": "typescript"
   },
+  "RuntimeConfiguration": {
+    "prefix": "nrun",
+    "body": "import getConfig from 'next/config'\n\nconst { publicRuntimeConfig, serverRuntimeConfig } = getConfig() as {\n  publicRuntimeConfig: Record<string, unknown>\n  serverRuntimeConfig: Record<string, unknown>\n}",
+    "description": "Next.js Runtime Configuration",
+    "scope": "typescript,typescriptreact"
+  },
   "getServerSideProps": {
     "prefix": [
       "nget",
