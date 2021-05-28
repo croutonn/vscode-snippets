@@ -5,13 +5,15 @@ scope: typescriptreact
 ---
 
 ```typescript
+import React from 'react'
+
 type ${1:$TM_FILENAME_BASE}Props = {
 }
 
-const ${1:$TM_FILENAME_BASE}: React.FunctionComponent<${1:$TM_FILENAME_BASE}Props> = (props) => {
+function ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>): React.ReactElement | null {
 	return (
 		<>
-			${2}
+			${3}
 		</>
 	)
 }
