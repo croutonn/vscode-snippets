@@ -15,6 +15,7 @@ VSCode snippets for front-end engeneers.
 | [PreviewReset API](https://github.com/croutonn/vscode-snippets/blob/main/src/next/PreviewReset_API.md) | Next.js Preview Reset API | <kbd>nprev</kbd> | typescript |
 | [Preview API](https://github.com/croutonn/vscode-snippets/blob/main/src/next/Preview_API.md) | Next.js Preview API | <kbd>nprev</kbd> | typescript |
 | [RuntimeConfiguration](https://github.com/croutonn/vscode-snippets/blob/main/src/next/RuntimeConfiguration.md) | Next.js Runtime Configuration | <kbd>nrun</kbd> | typescript,typescriptreact |
+| [RuntimeConfigurationDeclaration](https://github.com/croutonn/vscode-snippets/blob/main/src/next/RuntimeConfigurationDeclaration.md) | Declaration for Next.js Runtime Configuration | <kbd>nrund</kbd> | typescript |
 | [getServerSideProps](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getServerSideProps.md) | Next.js GetServerSideProps | <kbd>nget</kbd>, <kbd>gssp</kbd> | typescriptreact |
 | [getStaticPaths](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getStaticPaths.md) | Next.js GetStaticPaths | <kbd>nget</kbd>, <kbd>gsp</kbd> | typescriptreact |
 | [getStaticProps](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getStaticProps.md) | Next.js GetStaticProps | <kbd>nget</kbd>, <kbd>gsp</kbd> | typescriptreact |
