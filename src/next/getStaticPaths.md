@@ -5,14 +5,14 @@ scope: typescriptreact
 ---
 
 ```typescript
-import { GetStaticPaths } from 'next'
+import type { GetStaticPathsContext, GetStaticPathsResult } from 'next'
 
 type ${1:$TM_FILENAME_BASE}Params = {
 	slug: string
 }
 
-export const getStaticPaths: GetStaticPaths<${1:$TM_FILENAME_BASE}Params> = async () => {
-	return {
+export async function getStaticPaths(context: GetStaticPathsContext): Promise<GetStaticPathsResult<${1:$TM_FILENAME_BASE}Params>> {
+  return {
 		paths: [],
 		fallback: false,
 	}

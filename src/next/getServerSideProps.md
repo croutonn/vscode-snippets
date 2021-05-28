@@ -5,7 +5,7 @@ scope: typescriptreact
 ---
 
 ```typescript
-import { GetServerSideProps } from 'next'
+import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'
 
 type ${1:$TM_FILENAME_BASE}Params = {
 	slug: string
@@ -13,7 +13,7 @@ type ${1:$TM_FILENAME_BASE}Params = {
 
 type ${1:$TM_FILENAME_BASE}Props = {}
 
-export const getServerSideProps: GetServerSideProps<${1:$TM_FILENAME_BASE}Props, ${1:$TM_FILENAME_BASE}Params> = async (context) => {
+export async function getServerSideProps(context: GetServerSidePropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetServerSidePropsResult<${1:$TM_FILENAME_BASE}Props>> {
 	const props: ${1:$TM_FILENAME_BASE}Props = {}
 	return {
 		props,

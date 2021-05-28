@@ -5,7 +5,8 @@ scope: typescriptreact
 ---
 
 ```typescript
-import { GetStaticProps, GetStaticPaths, NextPage } from 'next'
+import React from 'react'
+import type { GetStaticPathsContext, GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult } from 'next'
 
 type ${1:$TM_FILENAME_BASE}Params = {
 	slug: string
@@ -13,23 +14,23 @@ type ${1:$TM_FILENAME_BASE}Params = {
 
 type ${1:$TM_FILENAME_BASE}Props = {}
 
-const ${1:$TM_FILENAME_BASE}: NextPage<${1:$TM_FILENAME_BASE}Props> = (props) => {
+function ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>): React.ReactElement | null {
 	return (
 		<>
-			${2}
+			${3}
 		</>
 	)
 }
 
-const getStaticPaths: GetStaticPaths<${1:$TM_FILENAME_BASE}Params> = async () => {
-	return {
+async function getStaticPaths(context: GetStaticPathsContext): Promise<GetStaticPathsResult<${1:$TM_FILENAME_BASE}Params>> {
+  return {
 		paths: [],
 		fallback: false,
 	}
 }
 
-const getStaticProps: GetStaticProps<${1:$TM_FILENAME_BASE}Props, ${1:$TM_FILENAME_BASE}Params> = async (context) => {
-	const props: ${1:$TM_FILENAME_BASE}Props = {}
+async function getStaticProps(context: GetStaticPropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetStaticPropsResult<${1:$TM_FILENAME_BASE}Props>> {
+  const props: ${1:$TM_FILENAME_BASE}Props = {}
 	return {
 		props,
 	}

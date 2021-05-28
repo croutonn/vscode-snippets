@@ -7,8 +7,5 @@ scope: typescript,typescriptreact
 ```typescript
 import getConfig from 'next/config'
 
-const { publicRuntimeConfig, serverRuntimeConfig } = getConfig() as {
-  publicRuntimeConfig: Record<string, unknown>
-  serverRuntimeConfig: Record<string, unknown>
-}
+const { publicRuntimeConfig, serverRuntimeConfig } = getConfig()
 ```

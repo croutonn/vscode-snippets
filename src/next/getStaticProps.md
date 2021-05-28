@@ -5,7 +5,7 @@ scope: typescriptreact
 ---
 
 ```typescript
-import { GetStaticProps } from 'next'
+import type { GetStaticPropsContext, GetStaticPropsResult } from 'next'
 
 type ${1:$TM_FILENAME_BASE}Params = {
 	slug: string
@@ -13,8 +13,8 @@ type ${1:$TM_FILENAME_BASE}Params = {
 
 type ${1:$TM_FILENAME_BASE}Props = {}
 
-export const getStaticProps: GetStaticProps<${1:$TM_FILENAME_BASE}Props, ${1:$TM_FILENAME_BASE}Params> = async (context) => {
-    const props: ${1:$TM_FILENAME_BASE}Props = {}
+export async function getStaticProps(context: GetStaticPropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetStaticPropsResult<${1:$TM_FILENAME_BASE}Props>> {
+  const props: ${1:$TM_FILENAME_BASE}Props = {}
 	return {
 		props,
 	}
