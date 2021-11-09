@@ -5,12 +5,12 @@ scope: typescriptreact
 ---
 
 ```typescript
-import React from 'react'
-
 type ${1:$TM_FILENAME_BASE}Props = {
 }
 
-function ${1:$TM_FILENAME_BASE}({ ${2} }: ${1:$TM_FILENAME_BASE}Props): React.ReactElement | null {
+const ${1:$TM_FILENAME_BASE} = ({
+	${2}
+}: ${1:$TM_FILENAME_BASE}Props) => {
 	return (
 		<>
 			${3}

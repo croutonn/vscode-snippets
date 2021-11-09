@@ -5,16 +5,15 @@ scope: typescriptreact
 ---
 
 ```typescript
-import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'
+import { GetServerSideProps } from 'next'
 
 type ${1:$TM_FILENAME_BASE}Params = {
 	slug: string
 }
 
-type ${1:$TM_FILENAME_BASE}Props = {}
-
-export async function getServerSideProps(context: GetServerSidePropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetServerSidePropsResult<${1:$TM_FILENAME_BASE}Props>> {
+export const getServerSideProps: GetServerSideProps<${1:$TM_FILENAME_BASE}Params> = async (context) => {
 	const props: ${1:$TM_FILENAME_BASE}Props = {}
+
 	return {
 		props,
 	}

@@ -5,17 +5,17 @@ scope: typescript
 ---
 
 ```typescript
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiHandler } from "next";
 
-type ResponseBodyType = unknown
+type ResponseBodyType = unknown;
 
-function previewResetHandler(
-  request: NextApiRequest,
-  response: NextApiResponse<ResponseBodyType>
-): void | Promise<void> {
-  response.clearPreviewData()
-  response.status(200).end()
-}
+const previewResetHandler: NextApiHandler<ResponseBodyType> = (
+  request,
+  response
+) => {
+  response.clearPreviewData();
+  response.status(200).end();
+};
 
-export default previewResetHandler
+export default previewResetHandler;
 ```

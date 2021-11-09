@@ -1,19 +1,19 @@
 {
   "ForwardRefRenderFunction_Component": {
     "prefix": "frrfc",
-    "body": "import React, { ForwardRefRenderFunction, useImperativeHandle } from 'react'\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\ntype ${1:$TM_FILENAME_BASE}Handles = {}\n\nfunction ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>, ref: ((instance: T | null) => void) | React.MutableRefObject<T | null> | null): React.ReactElement | null {\n\tuseImperativeHandle(ref, () => ({\n\t\t${4:handles}\n\t}), [${5:dependencies}])\n\treturn (\n\t\t<>\n\t\t\t${3}\n\t\t</>\n\t)\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
+    "body": "import * as React from 'react'\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\nconst ${1:$TM_FILENAME_BASE} = React.forwardRef<\n\tReact.ElementRef<typeof ${2:$TM_TARGET_COMPONENT}>,\n\tReact.ComponentPropsWithoutRef<typeof ${2:$TM_TARGET_COMPONENT}>\n>((props, forwardedRef) => (\n\t<${2:$TM_TARGET_COMPONENT} {...props} ref={forwardedRef} />\n))\n\nexport default ${1:$TM_FILENAME_BASE}",
     "description": "ForwardRefRenderFunction Component",
     "scope": "typescriptreact"
   },
   "Function_Component": {
     "prefix": "fc",
-    "body": "import React from 'react'\n\ntype ${1:$TM_FILENAME_BASE}Props = {\n}\n\nfunction ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>): React.ReactElement | null {\n\treturn (\n\t\t<>\n\t\t\t${3}\n\t\t</>\n\t)\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
+    "body": "import * as React from 'react'\n\ntype ${1:$TM_FILENAME_BASE}Props = {\n}\n\nconst ${1:$TM_FILENAME_BASE} = ({\n\tchildren,\n\t${2}\n}: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>) => {\n\treturn (\n\t\t<>\n\t\t\t{children}\n\t\t</>\n\t)\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
     "description": "React Function Component",
     "scope": "typescriptreact"
   },
   "Void_Function_Component": {
     "prefix": "vfc",
-    "body": "import React from 'react'\n\ntype ${1:$TM_FILENAME_BASE}Props = {\n}\n\nfunction ${1:$TM_FILENAME_BASE}({ ${2} }: ${1:$TM_FILENAME_BASE}Props): React.ReactElement | null {\n\treturn (\n\t\t<>\n\t\t\t${3}\n\t\t</>\n\t)\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
+    "body": "type ${1:$TM_FILENAME_BASE}Props = {\n}\n\nconst ${1:$TM_FILENAME_BASE} = ({\n\t${2}\n}: ${1:$TM_FILENAME_BASE}Props) => {\n\treturn (\n\t\t<>\n\t\t\t${3}\n\t\t</>\n\t)\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
     "description": "React Void Function Component",
     "scope": "typescriptreact"
   }

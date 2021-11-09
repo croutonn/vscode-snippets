@@ -5,22 +5,16 @@ scope: typescriptreact
 ---
 
 ```typescript
-import React, { ForwardRefRenderFunction, useImperativeHandle } from 'react'
+import * as React from 'react'
 
 type ${1:$TM_FILENAME_BASE}Props = {}
 
-type ${1:$TM_FILENAME_BASE}Handles = {}
-
-function ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>, ref: ((instance: T | null) => void) | React.MutableRefObject<T | null> | null): React.ReactElement | null {
-	useImperativeHandle(ref, () => ({
-		${4:handles}
-	}), [${5:dependencies}])
-	return (
-		<>
-			${3}
-		</>
-	)
-}
+const ${1:$TM_FILENAME_BASE} = React.forwardRef<
+	React.ElementRef<typeof ${2:$TM_TARGET_COMPONENT}>,
+	React.ComponentPropsWithoutRef<typeof ${2:$TM_TARGET_COMPONENT}>
+>((props, forwardedRef) => (
+	<${2:$TM_TARGET_COMPONENT} {...props} ref={forwardedRef} />
+))
 
 export default ${1:$TM_FILENAME_BASE}
 ```

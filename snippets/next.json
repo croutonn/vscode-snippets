@@ -1,11 +1,48 @@
 {
+  "getServerSideProps": {
+    "prefix": [
+      "nget",
+      "gssp"
+    ],
+    "body": "import { GetServerSideProps } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\nexport const getServerSideProps: GetServerSideProps<${1:$TM_FILENAME_BASE}Params> = async (context) => {\n\tconst props: ${1:$TM_FILENAME_BASE}Props = {}\n\n\treturn {\n\t\tprops,\n\t}\n}",
+    "description": "Next.js GetServerSideProps",
+    "scope": "typescriptreact"
+  },
+  "getStaticPaths": {
+    "prefix": [
+      "nget",
+      "gsp"
+    ],
+    "body": "import { GetStaticPaths } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\nexport const getStaticPaths: GetStaticPaths<${1:$TM_FILENAME_BASE}Params> = async (context) => {\n\treturn {\n\t\tpaths: [],\n\t\tfallback: false,\n\t}\n}",
+    "description": "Next.js GetStaticPaths",
+    "scope": "typescriptreact"
+  },
+  "getStaticProps": {
+    "prefix": [
+      "nget",
+      "gsp"
+    ],
+    "body": "import { GetStaticProps } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\nexport const getStaticProps: GetStaticProps<${1:$TM_FILENAME_BASE}Params> = async (context) => {\n\tconst props: ${1:$TM_FILENAME_BASE}Props = {}\n\n\treturn {\n\t\tprops,\n\t}\n}",
+    "description": "Next.js GetStaticProps",
+    "scope": "typescriptreact"
+  },
+  "NextPageWithLayout": {
+    "prefix": [
+      "npagel",
+      "nextpagewithlayout",
+      "npwl"
+    ],
+    "body": "import * as React from \"react\";\nimport { NextPageWithLayout } from \"next\";\nimport { AppProps } from \"next/app\";\n\ndeclare module \"next\" {\n  export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {\n    getLayout?: (page: React.ReactElement) => React.ReactNode;\n  };\n}\n\ndeclare module \"next/app\" {\n  export type AppPropsWithLayout<P = {}, IP = P> = AppProps<P> & {\n    Component: NextPageWithLayout<P, IP>;\n  };\n}",
+    "description": "Next.js Page With Layout Declaration",
+    "scope": "typescriptreact"
+  },
   "NextPage_SSG": {
     "prefix": [
       "npage",
       "nextpage",
       "npssg"
     ],
-    "body": "import React from 'react'\nimport type { GetStaticPathsContext, GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\nfunction ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>): React.ReactElement | null {\n\treturn (\n\t\t<>\n\t\t\t${3}\n\t\t</>\n\t)\n}\n\nasync function getStaticPaths(context: GetStaticPathsContext): Promise<GetStaticPathsResult<${1:$TM_FILENAME_BASE}Params>> {\n  return {\n\t\tpaths: [],\n\t\tfallback: false,\n\t}\n}\n\nasync function getStaticProps(context: GetStaticPropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetStaticPropsResult<${1:$TM_FILENAME_BASE}Props>> {\n  const props: ${1:$TM_FILENAME_BASE}Props = {}\n\treturn {\n\t\tprops,\n\t}\n}\n\nexport default ${1:$TM_FILENAME_BASE}\nexport { getStaticPaths, getStaticProps }",
+    "body": "import * as React from 'react'\nimport { GetStaticPaths, GetStaticProps, NextPage } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\nconst ${1:$TM_FILENAME_BASE}: NextPage = ({\n\t${2}\n}: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>) => {\n\treturn (\n\t\t<>\n\t\t\t${3}\n\t\t</>\n\t)\n}\n\nconst getStaticPaths: GetStaticPaths<${1:$TM_FILENAME_BASE}Params> = async (context) => {\n\treturn {\n\t\tpaths: [],\n\t\tfallback: false,\n\t}\n}\n\nconst getStaticProps: GetStaticProps<${1:$TM_FILENAME_BASE}Params> = async (context) => {\n\tconst props: ${1:$TM_FILENAME_BASE}Props = {}\n\n\treturn {\n\t\tprops,\n\t}\n}\n\nexport default ${1:$TM_FILENAME_BASE}\nexport { getStaticPaths, getStaticProps }",
     "description": "Next.js Page for SSG",
     "scope": "typescriptreact"
   },
@@ -15,19 +52,19 @@
       "nextpage",
       "npssr"
     ],
-    "body": "import React from 'react'\nimport type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\nfunction ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>): React.ReactElement | null {\n\treturn (\n\t\t<>\n\t\t\t${3}\n\t\t</>\n\t)\n}\n\nasync function getServerSideProps(context: GetServerSidePropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetServerSidePropsResult<${1:$TM_FILENAME_BASE}Props>> {\n\tconst props: ${1:$TM_FILENAME_BASE}Props = {}\n\treturn {\n\t\tprops,\n\t}\n}\nexport default ${1:$TM_FILENAME_BASE}\nexport { getServerSideProps }",
+    "body": "import * as React from 'react'\nimport { GetServerSideProps } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\nconst ${1:$TM_FILENAME_BASE}: NextPage = ({\n\t${2}\n}: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>) => {\n\treturn (\n\t\t<>\n\t\t\t${3}\n\t\t</>\n\t)\n}\n\nconst getServerSideProps: GetServerSideProps<${1:$TM_FILENAME_BASE}Params> = async (context) => {\n\tconst props: ${1:$TM_FILENAME_BASE}Props = {}\n\n\treturn {\n\t\tprops,\n\t}\n}\n\nexport default ${1:$TM_FILENAME_BASE}\nexport { getServerSideProps }",
     "description": "Next.js Page for SSR",
     "scope": "typescriptreact"
   },
   "PreviewReset_API": {
     "prefix": "nprev",
-    "body": "import type { NextApiRequest, NextApiResponse } from 'next'\n\ntype ResponseBodyType = unknown\n\nfunction previewResetHandler(\n  request: NextApiRequest,\n  response: NextApiResponse<ResponseBodyType>\n): void | Promise<void> {\n  response.clearPreviewData()\n  response.status(200).end()\n}\n\nexport default previewResetHandler",
+    "body": "import { NextApiHandler } from \"next\";\n\ntype ResponseBodyType = unknown;\n\nconst previewResetHandler: NextApiHandler<ResponseBodyType> = (\n  request,\n  response\n) => {\n  response.clearPreviewData();\n  response.status(200).end();\n};\n\nexport default previewResetHandler;",
     "description": "Next.js Preview Reset API",
     "scope": "typescript"
   },
   "Preview_API": {
     "prefix": "nprev",
-    "body": "import type { NextApiRequest, NextApiResponse } from 'next'\n\ntype ResponseBodyType = unknown\n\nfunction previewHandler(\n  request: NextApiRequest,\n  response: NextApiResponse<ResponseBodyType>\n): void | Promise<void> {\n  const previewData = {}\n  response.setPreviewData(previewData)\n  response.status(200).end()\n}\n\nexport default previewHandler",
+    "body": "import { NextApiHandler } from \"next\";\n\ntype ResponseBodyType = unknown;\n\nconst previewHandler: NextApiHandler<ResponseBodyType> = (\n  request,\n  response\n) => {\n  const previewData = {};\n  response.setPreviewData(previewData);\n  response.status(200).end();\n};\n\nexport default previewHandler;",
     "description": "Next.js Preview API",
     "scope": "typescript"
   },
@@ -42,32 +79,5 @@
     "body": "declare module 'next/config' {\n  import type { PublicRuntimeConfig, ServerRuntimeConfig } from '${1}'\n\n  function getConfig<P = PublicRuntimeConfig, S = ServerRuntimeConfig>(): {\n    publicRuntimeConfig: P\n    serverRuntimeConfig: S\n  }\n  export default getConfig\n}",
     "description": "Declaration for Next.js Runtime Configuration",
     "scope": "typescript"
-  },
-  "getServerSideProps": {
-    "prefix": [
-      "nget",
-      "gssp"
-    ],
-    "body": "import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\nexport async function getServerSideProps(context: GetServerSidePropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetServerSidePropsResult<${1:$TM_FILENAME_BASE}Props>> {\n\tconst props: ${1:$TM_FILENAME_BASE}Props = {}\n\treturn {\n\t\tprops,\n\t}\n}",
-    "description": "Next.js GetServerSideProps",
-    "scope": "typescriptreact"
-  },
-  "getStaticPaths": {
-    "prefix": [
-      "nget",
-      "gsp"
-    ],
-    "body": "import type { GetStaticPathsContext, GetStaticPathsResult } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\nexport async function getStaticPaths(context: GetStaticPathsContext): Promise<GetStaticPathsResult<${1:$TM_FILENAME_BASE}Params>> {\n  return {\n\t\tpaths: [],\n\t\tfallback: false,\n\t}\n}",
-    "description": "Next.js GetStaticPaths",
-    "scope": "typescriptreact"
-  },
-  "getStaticProps": {
-    "prefix": [
-      "nget",
-      "gsp"
-    ],
-    "body": "import type { GetStaticPropsContext, GetStaticPropsResult } from 'next'\n\ntype ${1:$TM_FILENAME_BASE}Params = {\n\tslug: string\n}\n\ntype ${1:$TM_FILENAME_BASE}Props = {}\n\nexport async function getStaticProps(context: GetStaticPropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetStaticPropsResult<${1:$TM_FILENAME_BASE}Props>> {\n  const props: ${1:$TM_FILENAME_BASE}Props = {}\n\treturn {\n\t\tprops,\n\t}\n}",
-    "description": "Next.js GetStaticProps",
-    "scope": "typescriptreact"
   }
 }

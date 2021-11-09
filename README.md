@@ -10,15 +10,16 @@ VSCode snippets for front-end engeneers.
 ## next
 | Name | Description | Prefix | Scope |
 | :--- | :--- | :--- | :--- |
+| [getServerSideProps](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getServerSideProps.md) | Next.js GetServerSideProps | <kbd>nget</kbd>, <kbd>gssp</kbd> | typescriptreact |
+| [getStaticPaths](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getStaticPaths.md) | Next.js GetStaticPaths | <kbd>nget</kbd>, <kbd>gsp</kbd> | typescriptreact |
+| [getStaticProps](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getStaticProps.md) | Next.js GetStaticProps | <kbd>nget</kbd>, <kbd>gsp</kbd> | typescriptreact |
+| [NextPageWithLayout](https://github.com/croutonn/vscode-snippets/blob/main/src/next/NextPageWithLayout.md) | Next.js Page With Layout Declaration | <kbd>npagel</kbd>, <kbd>nextpagewithlayout</kbd>, <kbd>npwl</kbd> | typescriptreact |
 | [NextPage SSG](https://github.com/croutonn/vscode-snippets/blob/main/src/next/NextPage_SSG.md) | Next.js Page for SSG | <kbd>npage</kbd>, <kbd>nextpage</kbd>, <kbd>npssg</kbd> | typescriptreact |
 | [NextPage SSR](https://github.com/croutonn/vscode-snippets/blob/main/src/next/NextPage_SSR.md) | Next.js Page for SSR | <kbd>npage</kbd>, <kbd>nextpage</kbd>, <kbd>npssr</kbd> | typescriptreact |
 | [PreviewReset API](https://github.com/croutonn/vscode-snippets/blob/main/src/next/PreviewReset_API.md) | Next.js Preview Reset API | <kbd>nprev</kbd> | typescript |
 | [Preview API](https://github.com/croutonn/vscode-snippets/blob/main/src/next/Preview_API.md) | Next.js Preview API | <kbd>nprev</kbd> | typescript |
 | [RuntimeConfiguration](https://github.com/croutonn/vscode-snippets/blob/main/src/next/RuntimeConfiguration.md) | Next.js Runtime Configuration | <kbd>nrun</kbd> | typescript,typescriptreact |
 | [RuntimeConfigurationDeclaration](https://github.com/croutonn/vscode-snippets/blob/main/src/next/RuntimeConfigurationDeclaration.md) | Declaration for Next.js Runtime Configuration | <kbd>nrund</kbd> | typescript |
-| [getServerSideProps](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getServerSideProps.md) | Next.js GetServerSideProps | <kbd>nget</kbd>, <kbd>gssp</kbd> | typescriptreact |
-| [getStaticPaths](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getStaticPaths.md) | Next.js GetStaticPaths | <kbd>nget</kbd>, <kbd>gsp</kbd> | typescriptreact |
-| [getStaticProps](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getStaticProps.md) | Next.js GetStaticProps | <kbd>nget</kbd>, <kbd>gsp</kbd> | typescriptreact |
 
 ## react
 | Name | Description | Prefix | Scope |

@@ -5,8 +5,8 @@ scope: typescriptreact
 ---
 
 ```typescript
-import React from 'react'
-import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'
+import * as React from 'react'
+import { GetServerSideProps } from 'next'
 
 type ${1:$TM_FILENAME_BASE}Params = {
 	slug: string
@@ -14,7 +14,9 @@ type ${1:$TM_FILENAME_BASE}Params = {
 
 type ${1:$TM_FILENAME_BASE}Props = {}
 
-function ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>): React.ReactElement | null {
+const ${1:$TM_FILENAME_BASE}: NextPage = ({
+	${2}
+}: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>) => {
 	return (
 		<>
 			${3}
@@ -22,12 +24,14 @@ function ${1:$TM_FILENAME_BASE}({ ${2} }: React.PropsWithChildren<${1:$TM_FILENA
 	)
 }
 
-async function getServerSideProps(context: GetServerSidePropsContext<${1:$TM_FILENAME_BASE}Params>): Promise<GetServerSidePropsResult<${1:$TM_FILENAME_BASE}Props>> {
+const getServerSideProps: GetServerSideProps<${1:$TM_FILENAME_BASE}Params> = async (context) => {
 	const props: ${1:$TM_FILENAME_BASE}Props = {}
+
 	return {
 		props,
 	}
 }
+
 export default ${1:$TM_FILENAME_BASE}
 export { getServerSideProps }
 ```
