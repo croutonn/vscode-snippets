@@ -14,9 +14,9 @@ type ${1:$TM_FILENAME_BASE}Params = {
 
 type ${1:$TM_FILENAME_BASE}Props = {}
 
-const ${1:$TM_FILENAME_BASE}: NextPage = ({
+const ${1:$TM_FILENAME_BASE}: NextPage<${1:$TM_FILENAME_BASE}Props> = ({
 	${2}
-}: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>) => {
+}) => {
 	return (
 		<>
 			${3}

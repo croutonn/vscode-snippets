@@ -1,8 +1,0 @@
-{
-  "Promise": {
-    "prefix": "prom",
-    "body": "new Promise((resolve, reject) => {\n\t${1}\n})",
-    "description": "Promise Snippet",
-    "scope": "javascript,javascriptreact,typescript,typescriptreact"
-  }
-}

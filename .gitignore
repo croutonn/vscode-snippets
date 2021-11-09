@@ -105,3 +105,6 @@ dist
 
 # vscode extension file
 *.vsix
+
+# snippets directory
+/snippets
