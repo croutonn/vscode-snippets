@@ -24,6 +24,10 @@ const ${1:$TM_FILENAME_BASE}: NextPageWithLayout<${1:$TM_FILENAME_BASE}Props> = 
 	)
 }
 
+${1:$TM_FILENAME_BASE}.getLayout = (page) => {
+	return <${2:BasicLayout}></${2:BasicLayout}>
+}
+
 const getStaticPaths: GetStaticPaths<${1:$TM_FILENAME_BASE}Params> = async (context) => {
 	return {
 		paths: [],
