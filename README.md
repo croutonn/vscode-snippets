@@ -14,6 +14,8 @@ VSCode snippets for front-end engeneers.
 | [getStaticPaths](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getStaticPaths.md) | Next.js GetStaticPaths | <kbd>nget</kbd>, <kbd>gsp</kbd> | typescriptreact |
 | [getStaticProps](https://github.com/croutonn/vscode-snippets/blob/main/src/next/getStaticProps.md) | Next.js GetStaticProps | <kbd>nget</kbd>, <kbd>gsp</kbd> | typescriptreact |
 | [NextPageWithLayout](https://github.com/croutonn/vscode-snippets/blob/main/src/next/NextPageWithLayout.md) | Next.js Page With Layout Declaration | <kbd>npagel</kbd>, <kbd>nextpagewithlayout</kbd>, <kbd>npwl</kbd> | typescriptreact |
+| [NextPageWithLayout SSG](https://github.com/croutonn/vscode-snippets/blob/main/src/next/NextPageWithLayout_SSG.md) | Next.js Page for SSG | <kbd>npagel</kbd>, <kbd>nextpagel</kbd>, <kbd>npssgl</kbd> | typescriptreact |
+| [NextPageWithLayout SSR](https://github.com/croutonn/vscode-snippets/blob/main/src/next/NextPageWithLayout_SSR.md) | Next.js Page for SSR | <kbd>npage</kbd>, <kbd>nextpage</kbd>, <kbd>npssr</kbd> | typescriptreact |
 | [NextPage SSG](https://github.com/croutonn/vscode-snippets/blob/main/src/next/NextPage_SSG.md) | Next.js Page for SSG | <kbd>npage</kbd>, <kbd>nextpage</kbd>, <kbd>npssg</kbd> | typescriptreact |
 | [NextPage SSR](https://github.com/croutonn/vscode-snippets/blob/main/src/next/NextPage_SSR.md) | Next.js Page for SSR | <kbd>npage</kbd>, <kbd>nextpage</kbd>, <kbd>npssr</kbd> | typescriptreact |
 | [PreviewReset API](https://github.com/croutonn/vscode-snippets/blob/main/src/next/PreviewReset_API.md) | Next.js Preview Reset API | <kbd>nprev</kbd> | typescript |

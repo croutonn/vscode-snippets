@@ -1,7 +1,7 @@
 {
   "name": "vscode-snippets-croutonn",
   "description": "VSCode snippets for front-end engeneers.",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "repository": "git@github.com:croutonn/vscode-snippets.git",
   "author": "croutonn <croutonna@gmail.com>",
   "publisher": "croutonn",
@@ -65,7 +65,7 @@
     ]
   },
   "scripts": {
-    "prebuild": "mkdir -p snippets",
+    "prebuild": "mkdir snippets",
     "build": "run-p build:*",
     "build:react-hooks": "vscode-snippet-generator -s src/react-hooks -o snippets/react-hooks.json",
     "build:react": "vscode-snippet-generator -s src/react -o snippets/react.json",
@@ -77,10 +77,12 @@
     "prevsce-pack": "npm run build",
     "vsce-pack": "vsce package --githubBranch main",
     "prevsce-publish": "npm run vsce-pack",
-    "vsce-publish": "vsce publish --githubBranch main"
+    "vsce-publish": "vsce publish --githubBranch main",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "front-matter": "^4.0.2",
+    "husky": "^7.0.4",
     "npm-run-all": "^4.1.5",
     "vsce": "^2.2.0",
     "vscode-snippet-generator": "^1.3.2"
