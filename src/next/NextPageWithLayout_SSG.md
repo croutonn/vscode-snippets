@@ -1,6 +1,6 @@
 ---
 prefix: [npagel, nextpagel, npssgl]
-description: Next.js Page for SSG
+description: Next.js Page with layout for SSG
 scope: typescriptreact
 ---
 

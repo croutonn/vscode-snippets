@@ -1,6 +1,6 @@
 ---
 prefix: [npage, nextpage, npssr]
-description: Next.js Page for SSR
+description: Next.js Page with layout for SSR
 scope: typescriptreact
 ---
 
