@@ -14,9 +14,7 @@ type ${1:$TM_FILENAME_BASE}Params = {
 
 type ${1:$TM_FILENAME_BASE}Props = {}
 
-const ${1:$TM_FILENAME_BASE}: NextPageWithLayout<${1:$TM_FILENAME_BASE}Props> = ({
-	${2}
-}) => {
+const ${1:$TM_FILENAME_BASE}: NextPageWithLayout<${1:$TM_FILENAME_BASE}Props> = (context) => {
 	return (
 		<>
 			${3}
@@ -35,7 +33,7 @@ const getStaticPaths: GetStaticPaths<${1:$TM_FILENAME_BASE}Params> = async (cont
 	}
 }
 
-const getStaticProps: GetStaticProps<${1:$TM_FILENAME_BASE}Params> = async (context) => {
+const getStaticProps: GetStaticProps<${1:$TM_FILENAME_BASE}Props, ${1:$TM_FILENAME_BASE}Params> = async (context) => {
 	const props: ${1:$TM_FILENAME_BASE}Props = {}
 
 	return {

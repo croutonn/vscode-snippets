@@ -14,9 +14,7 @@ type ${1:$TM_FILENAME_BASE}Params = {
 
 type ${1:$TM_FILENAME_BASE}Props = {}
 
-const ${1:$TM_FILENAME_BASE}: NextPageWithLayout<${1:$TM_FILENAME_BASE}Props> = ({
-	${2}
-}) => {
+const ${1:$TM_FILENAME_BASE}: NextPageWithLayout<${1:$TM_FILENAME_BASE}Props> = (context) => {
 	return (
 		<>
 			${3}
@@ -28,7 +26,7 @@ ${1:$TM_FILENAME_BASE}.getLayout = (page) => {
 	return <${2:BasicLayout}></${2:BasicLayout}>
 }
 
-const getServerSideProps: GetServerSideProps<${1:$TM_FILENAME_BASE}Params> = async (context) => {
+const getServerSideProps: GetServerSideProps<${1:$TM_FILENAME_BASE}Props, ${1:$TM_FILENAME_BASE}Params> = async (context) => {
 	const props: ${1:$TM_FILENAME_BASE}Props = {}
 
 	return {
