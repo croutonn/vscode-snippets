@@ -1,7 +1,7 @@
 {
   "name": "vscode-snippets-croutonn",
   "description": "VSCode snippets for front-end engeneers.",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "repository": "git@github.com:croutonn/vscode-snippets.git",
   "author": "croutonn <croutonna@gmail.com>",
   "publisher": "croutonn",
