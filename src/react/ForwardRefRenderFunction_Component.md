@@ -14,5 +14,7 @@ const ${1:$TM_FILENAME_BASE} = React.forwardRef<
 	<${2:TARGET_COMPONENT} {...props} ref={forwardedRef} />
 ))
 
+${1:$TM_FILENAME_BASE}.displayName = "${1:$TM_FILENAME_BASE}"
+
 export default ${1:$TM_FILENAME_BASE}
 ```
