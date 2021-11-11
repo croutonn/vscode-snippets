@@ -8,12 +8,12 @@ scope: typescriptreact
 import * as React from 'react'
 
 type ${1:$TM_FILENAME_BASE}Props = {
+	children: React.ReactNode
 }
 
 const ${1:$TM_FILENAME_BASE} = ({
-	children,
-	${2}
-}: React.PropsWithChildren<${1:$TM_FILENAME_BASE}Props>) => {
+	children
+}: ${1:$TM_FILENAME_BASE}Props) => {
 	return (
 		<>
 			{children}

@@ -5,15 +5,15 @@ scope: typescriptreact
 ---
 
 ```typescript
+import * as React from 'react'
+
 type ${1:$TM_FILENAME_BASE}Props = {
 }
 
-const ${1:$TM_FILENAME_BASE} = ({
-	${2}
-}: ${1:$TM_FILENAME_BASE}Props) => {
+const ${1:$TM_FILENAME_BASE} = (props: ${1:$TM_FILENAME_BASE}Props) => {
 	return (
 		<>
-			${3}
+			${2}
 		</>
 	)
 }
