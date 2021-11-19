@@ -27,7 +27,7 @@ VSCode snippets for front-end engeneers.
 | Name | Description | Prefix | Scope |
 | :--- | :--- | :--- | :--- |
 | [ForwardRefComponentType](https://github.com/croutonn/vscode-snippets/blob/main/src/react/ForwardRefComponentType.md) | ForwardRefComponent | <kbd>frec</kbd> | typescript,typescriptreact |
-| [ForwardRefRenderFunction Component](https://github.com/croutonn/vscode-snippets/blob/main/src/react/ForwardRefRenderFunction_Component.md) | ForwardRefRenderFunction Component | <kbd>frrfc</kbd> | typescriptreact |
+| [ForwardRefRenderFunction Component](https://github.com/croutonn/vscode-snippets/blob/main/src/react/ForwardRefRenderFunction_Component.md) | ForwardRefRenderFunction Component | <kbd>frec</kbd> | typescriptreact |
 | [ForwardRefRenderFunction ComponentSimple](https://github.com/croutonn/vscode-snippets/blob/main/src/react/ForwardRefRenderFunction_ComponentSimple.md) | ForwardRefRenderFunction Component | <kbd>frec</kbd> | typescriptreact |
 | [Function Component](https://github.com/croutonn/vscode-snippets/blob/main/src/react/Function_Component.md) | React Function Component | <kbd>fc</kbd> | typescriptreact |
 | [Void Function Component](https://github.com/croutonn/vscode-snippets/blob/main/src/react/Void_Function_Component.md) | React Void Function Component | <kbd>vfc</kbd> | typescriptreact |
