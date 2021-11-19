@@ -7,12 +7,13 @@ scope: typescriptreact
 ```typescript
 import * as React from 'react'
 import { GetServerSideProps, NextPageWithLayout } from 'next'
+import type { ParsedUrlQuery } from "querystring";
 
-type ${1:$TM_FILENAME_BASE}Params = {
+export interface ${1:$TM_FILENAME_BASE}Params extends ParsedUrlQuery {
 	slug: string
 }
 
-type ${1:$TM_FILENAME_BASE}Props = {}
+export interface ${1:$TM_FILENAME_BASE}Props {}
 
 const ${1:$TM_FILENAME_BASE}: NextPageWithLayout<${1:$TM_FILENAME_BASE}Props> = (context) => {
 	return (

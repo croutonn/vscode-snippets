@@ -7,9 +7,8 @@ scope: typescriptreact
 ```typescript
 import * as React from 'react'
 
-type ${1:$TM_FILENAME_BASE}Props = {
-	children: React.ReactNode
-}
+export interface ${1:$TM_FILENAME_BASE}Props = React.PropsWithChildren<{
+}>
 
 const ${1:$TM_FILENAME_BASE} = ({
 	children

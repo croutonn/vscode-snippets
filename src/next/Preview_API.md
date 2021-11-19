@@ -7,7 +7,7 @@ scope: typescript
 ```typescript
 import { NextApiHandler } from "next";
 
-type ResponseBodyType = unknown;
+export type ResponseBodyType = unknown;
 
 const previewHandler: NextApiHandler<ResponseBodyType> = (
   request,
